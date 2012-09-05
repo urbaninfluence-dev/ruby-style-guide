@@ -181,15 +181,6 @@ You can generate a PDF or an HTML copy of this guide using
       Mailer.deliver(to: 'bob@example.com', from: 'us@example.com', subject: 'Important message', body: source.text)
     end
 
-    # bad (normal indent)
-    def send_mail(source)
-      Mailer.deliver(
-        to: 'bob@example.com',
-        from: 'us@example.com',
-        subject: 'Important message',
-        body: source.text)
-    end
-
     # bad (double indent)
     def send_mail(source)
       Mailer.deliver(
@@ -201,10 +192,12 @@ You can generate a PDF or an HTML copy of this guide using
 
     # good
     def send_mail(source)
-      Mailer.deliver(to: 'bob@example.com',
-                     from: 'us@example.com',
-                     subject: 'Important message',
-                     body: source.text)
+      Mailer.deliver(
+        to: 'bob@example.com',
+        from: 'us@example.com',
+        subject: 'Important message',
+        body: source.text
+      )
     end
     ```
 
